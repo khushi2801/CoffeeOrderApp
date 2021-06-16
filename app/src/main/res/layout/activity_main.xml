@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:hint="@string/name_of_user"
+                android:inputType="textCapWords"
+                style="@style/EditboxStyle"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:hint="@string/address_of_user"
+                android:inputType="textCapWords"
+                style="@style/EditboxStyle"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:hint="@string/email_of_user"
+                android:inputType="textEmailAddress"
+                style="@style/EditboxStyle"/>
+
+            <TextView
+                android:text="@string/toppings"
+                style="@style/HeaderTextStyle" />
+
+            <CheckBox
+                android:id="@+id/whipped_cream_checkbox"
+                android:text="@string/whipped_cream"
+                style="@style/CheckboxStyle"/>
+
+            <CheckBox
+                android:id="@+id/chocolate_checkbox"
+                android:text="@string/chocolate"
+                style="@style/CheckboxStyle"/>
+
+            <TextView
+                android:text="@string/price"
+                style="@style/HeaderTextStyle" />
+
+            <TextView
+                android:text="@string/display"
+                style="@style/TextStyle" />
+
+            <TextView
+                android:text="@string/quantity"
+                style="@style/HeaderTextStyle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_height="48dp"
+                    android:layout_width="48dp"
+                    android:text="@string/decrement"
+                    android:onClick="decrement" />
+
+                <TextView
+                    android:id="@+id/quantity_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/number"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_height="48dp"
+                    android:layout_width="48dp"
+                    android:text="@string/increment"
+                    android:onClick="increment" />
+            </LinearLayout>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/order"
+                android:onClick="submitOrder" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
